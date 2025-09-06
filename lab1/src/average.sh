@@ -1,4 +1,10 @@
 #!/bin/sh
 
 echo "Number of arguments: $#"
-echo "Number of args: $(($# / 2))"
+
+sum1=0
+for n in $@
+do
+  let sum1=$sum1+$n
+done
+echo "Average of args: $(($sum1 / $#))"
